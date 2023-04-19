@@ -1,5 +1,5 @@
 
-// block npm/yarn in yarn/npm
+// block npm in yarn projects and vice versa
 npm() {
   if [ -f yarn.lock ]; then
     echo 'use yarn';
