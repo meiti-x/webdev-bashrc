@@ -1,5 +1,5 @@
 
-// block npm in yarn projects and vice versa
+# block npm in yarn projects and vice versa
 npm() {
   if [ -f yarn.lock ]; then
     echo 'use yarn';
@@ -15,4 +15,10 @@ yarn() {
     command yarn $*;
   fi
 }
+
+# alias
+alias ..='cd ../'
+alias ..2='cd ../../'
+alias ..3='cd ../../../'
+alias ..4='cd ../../../../'
 
