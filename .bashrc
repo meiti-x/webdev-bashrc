@@ -18,9 +18,9 @@ yarn() {
 
 # change node version to defined version in .nvmrc
 function cd() {
-  builtin cd "$@"  # call the original 'cd' command
-  if [[ -f ".nvmrc" ]]; then  # check for .nvmrc file
-    nvm use  # use the specified Node.js version
+  builtin cd "$@" 
+  if [[ -f ".nvmrc" ]]; then  
+    nvm use
   fi
 }
 
