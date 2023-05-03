@@ -17,12 +17,12 @@ yarn() {
 }
 
 # change node version to defined version in .nvmrc
-function cd() {
-  builtin cd "$@" 
-  if [[ -f ".nvmrc" ]]; then  
-    nvm use
-  fi
-}
+# function cd() {
+#  builtin cd "$@" 
+#  if [[ -f ".nvmrc" ]]; then  
+#    nvm use
+#  fi
+# }
 
 # alias
 alias ..='cd ../'
