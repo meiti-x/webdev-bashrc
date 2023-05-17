@@ -74,5 +74,3 @@ Contributions to this open-source project are welcome! If you find any bugs, hav
 4. Push your changes to your forked repository.
 5. Submit a pull request, explaining the changes you made and why they should be merged.
 
-Please adhere to the coding style, include necessary documentation, and ensure all tests pass before submitting a pull request.
-
