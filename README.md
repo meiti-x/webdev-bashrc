@@ -22,14 +22,7 @@ This is an open-source repository containing my personal `.bashrc` configuration
 
 ## Prerequisites
 
-Before using this `.bashrc` configuration, make sure you have the following prerequisites installed on your system:
-
-- Git: Version control system. Install using `sudo apt install git`.
-- NVM: Node Version Manager. Install using the installation script provided by NVM.
-- Visual Studio Code: Integrated Development Environment. Install using `sudo apt install code`.
-- Google Chrome: Web browser. Install using `sudo apt install google-chrome-stable`.
-- Curl: Command-line tool for transferring data. Install using `sudo apt install curl`.
-- Wget: Command-line tool for retrieving files. Install using `sudo apt install wget`.
+This bashrc config tested for ubuntu 22.04.10
 
 ## Installation
 
