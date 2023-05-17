@@ -16,17 +16,33 @@ yarn() {
   fi
 }
 
-# change node version to defined version in .nvmrc
-# function cd() {
-#  builtin cd "$@" 
-#  if [[ -f ".nvmrc" ]]; then  
-#    nvm use
-#  fi
-# }
-
 # alias
 alias ..='cd ../'
 alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
 
+# Function to install web development prerequisites
+install-webdev-prerequisites() {
+  sudo apt update
+
+  sudo apt install -y git
+  sudo apt install -y curl
+  sudo apt install -y wget
+
+  # Install Node Version Manager (NVM)
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+  # Load NVM
+  source ~/.bashrc
+
+  # Install the latest LTS version of Node.js
+  nvm install --lts
+
+
+  sudo snap install code --classic
+  sudo snap install postman
+  sudo apt install -y yakuake
+
+  echo "Web development prerequisites installed successfully."
+}
