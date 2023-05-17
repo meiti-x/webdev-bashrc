@@ -18,35 +18,14 @@ This is an open-source repository containing my personal `.bashrc` configuration
 - Environment variables to customize the prompt, colors, and behavior.
 - Utility functions for file and directory operations.
 - Git shortcuts for streamlined version control.
-- Integration with popular web development tools like NVM, Visual Studio Code, and Chrome.
+- Integration with popular web development tools like NVM, Visual Studio Code, and Postman.
 
 ## Prerequisites
-
 This bashrc config tested for ubuntu 22.04.10
 
 ## Installation
 
-To install and set up this `.bashrc` configuration, follow these steps:
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/bashrc-config.git
-   ```
-
-2. Copy the `.bashrc` file from the repository to your home directory:
-
-   ```bash
-   cp bashrc-config/.bashrc ~/
-   ```
-
-3. Open a new terminal session or run the following command to apply the changes:
-
-   ```bash
-   source ~/.bashrc
-   ```
-
-4. The configuration is now active, and you can start using the provided aliases and functions.
+most secure way is, copy the `.bashrc` file contents and add it to the end of your bashrc config
 
 ## Usage
 
