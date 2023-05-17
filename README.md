@@ -1,5 +1,7 @@
 # webdev-bashrc 
+![Uploading repository-open-graph-template.png…]()
 
+![Uploading banner.png…]()
 
 This is an open-source repository containing my personal `.bashrc` configuration. The `.bashrc` file is a script that is executed whenever you start a new interactive shell session. This configuration aims to enhance the terminal experience for web development and provide useful shortcuts, aliases, and functions.
 
