@@ -29,7 +29,8 @@ install-webdev-prerequisites() {
   sudo apt install -y git
   sudo apt install -y curl
   sudo apt install -y wget
-
+  sudo apt install exa
+  
   # Install Node Version Manager (NVM)
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
@@ -43,6 +44,4 @@ install-webdev-prerequisites() {
   sudo snap install code --classic
   sudo snap install postman
   sudo apt install -y yakuake
-
-  echo "Web development prerequisites installed successfully."
 }
