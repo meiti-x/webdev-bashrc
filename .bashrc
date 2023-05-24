@@ -21,6 +21,7 @@ alias ..='cd ../'
 alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
+alias ls='exa -hrFa --long'
 
 # Function to install web development prerequisites
 install-webdev-prerequisites() {
