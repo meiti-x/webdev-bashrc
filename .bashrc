@@ -30,7 +30,8 @@ install-webdev-prerequisites() {
   sudo apt install -y git
   sudo apt install -y curl
   sudo apt install -y wget
-  sudo apt install exa
+  sudo apt install -y exa
+  sudo apt install -y htop
   
   # Install Node Version Manager (NVM)
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
