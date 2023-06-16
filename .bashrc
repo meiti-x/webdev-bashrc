@@ -47,3 +47,8 @@ install-webdev-prerequisites() {
   sudo snap install postman
   sudo apt install -y yakuake
 }
+
+
+nr() {
+  npm run "$@"
+}
