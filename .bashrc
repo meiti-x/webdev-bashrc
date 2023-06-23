@@ -46,6 +46,7 @@ install-webdev-prerequisites() {
   sudo snap install code --classic
   sudo snap install postman
   sudo apt install -y yakuake
+  sudo snap install typora
 }
 
 
