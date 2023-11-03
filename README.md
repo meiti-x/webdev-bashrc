@@ -29,6 +29,8 @@ This bashrc config tested for ubuntu 22.04.10
 wget -qO- https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/.bashrc > webdev-bashrc.txt
 cat webdev-bashrc.txt >> ~/.bashrc
 source ~/.bashrc
+
+install-webdev-prerequisites
 ```
 ## Usage
 
