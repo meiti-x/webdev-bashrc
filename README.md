@@ -25,8 +25,11 @@ This bashrc config tested for ubuntu 22.04.10
 
 ## Installation
 
-most secure way is, copy the `.bashrc` file contents and add it to the end of your bashrc config
-
+```
+wget -qO- https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/.bashrc > webdev-bashrc.txt
+cat webdev-bashrc.txt >> ~/.bashrc
+source ~/.bashrc
+```
 ## Usage
 
 This `.bashrc` configuration provides various aliases and functions to streamline your workflow. Here are some examples of how you can use them:
