@@ -27,10 +27,19 @@ alias ls='exa -hrFa --long'
 install-webdev-prerequisites() {
   sudo apt update
 
+  echo "Installing git"
   sudo apt install -y git
+
+  echo "Installing curl"
   sudo apt install -y curl
+
+  echo "Installing wget"
   sudo apt install -y wget
+
+  echo "Installing exa"
   sudo apt install -y exa
+
+  echo "Installing htop"
   sudo apt install -y htop
   
   # Install Node Version Manager (NVM)
@@ -42,10 +51,16 @@ install-webdev-prerequisites() {
   # Install the latest LTS version of Node.js
   nvm install --lts
 
-
+  echo "Installing vscode"
   sudo snap install code --classic
+
+  echo "Installing postman"
   sudo snap install postman
+
+  echo "Installing yakuake"
   sudo apt install -y yakuake
+
+  echo "Installing Typora"
   sudo snap install typora
 }
 
