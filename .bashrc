@@ -62,6 +62,13 @@ install-webdev-prerequisites() {
 
   echo "Installing Typora"
   sudo snap install typora
+
+  echo "Installing safe eyes..."
+  sudo apt-get install safeeyes
+
+  # Load all changes
+  source ~/.bashrc
+
 }
 
 
