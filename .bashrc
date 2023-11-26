@@ -22,10 +22,15 @@ alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
 alias ls='exa -hrFa --long'
+alias os_updater='sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo apt -y dist-upgrade --auto-remove'
+alias ram_optimizer='sudo sync && sudo sysctl -w vm.drop_caches=3'
+alias swap_optimizer='sudo sync && sudo swapoff -a && sudo swapon -a'
+
+
 
 # Function to install web development prerequisites
 install-webdev-prerequisites() {
-  sudo apt update
+  sudo apt update && sudo apt -y upgrade
 
   echo "Installing git"
   sudo apt install -y git
@@ -70,9 +75,22 @@ install-webdev-prerequisites() {
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+  echo "Installing Archive Utilities"
+  sudo apt install -y rar unrar p7zip-full p7zip-rar
+
+  echo "Installing VLC"
+  sudo apt install -y vlc
+
+  echo "Installing ZSH"
+  sudo apt install -y zsh
+
+  echo "Installing Oh-my-zsh"
+  sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+
 
   # Load all changes
-  source ~/.bashrc
+  source ~/.zshrc
 
 }
 
