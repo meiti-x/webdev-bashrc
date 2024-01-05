@@ -1,7 +1,7 @@
 # webdev-bashrc 
 ![banner](https://github.com/mahdi-momeni/myBashrc/assets/32864532/c502180e-2993-4457-9fd2-0efe8d0bc99b)
 
-This is an open-source repository containing my personal `.bashrc` configuration. The `.bashrc` file is a script that is executed whenever you start a new interactive shell session. This configuration aims to enhance the terminal experience for web development and provide useful shortcuts, aliases, and functions.
+This is an open-source repository containing my personal `.zshrc` configuration. The `.bashrc` file is a script that is executed whenever you start a new interactive shell session. This configuration aims to enhance the terminal experience for web development and provide useful shortcuts, aliases, and functions.
 
 ## Table of Contents
 
@@ -27,8 +27,8 @@ This bashrc config tested for ubuntu 22.04.10
 
 ```
 wget -qO- https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/.bashrc > webdev-bashrc.txt
-cat webdev-bashrc.txt >> ~/.bashrc
-source ~/.bashrc
+cat webdev-bashrc.txt >> ~/.zshrc
+source ~/.zshrc
 
 install-webdev-prerequisites
 ```
