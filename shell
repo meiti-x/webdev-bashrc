@@ -46,7 +46,7 @@ install-webdev-prerequisites() {
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
   # Load NVM
-  source ~/.bashrc
+  source ~/.zshrc
 
   # Install the latest LTS version of Node.js
   nvm install --lts
@@ -72,7 +72,7 @@ install-webdev-prerequisites() {
 
 
   # Load all changes
-  source ~/.bashrc
+  source ~/.zshrc
 
 }
 
