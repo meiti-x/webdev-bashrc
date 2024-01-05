@@ -36,17 +36,31 @@ install-webdev-prerequisites
 
 This `.bashrc` configuration provides various aliases and functions to streamline your workflow. Here are some examples of how you can use them:
 
-- Use the `update` alias to update the package lists: `update`.
-- Upgrade installed packages using the `upgrade` alias: `upgrade`.
-- Use the `ll` alias to list all files and directories in the current directory: `ll`.
+
+
 - Navigate up one directory level using the `..` alias: `..`.
 - Navigate up two directory levels using the `...` alias: `...`.
 
 These are just a few examples, and you can explore the `.bashrc` file to discover more shortcuts and functions available.
 
+#### Aliases
+
+**navigating**
+
+| **Name** | **Usage**                                 |
+| -------- | ----------------------------------------- |
+| l        | list of files                             |
+| ll       | file list with  size,type, git files info |
+| lf       | file list with full detail                |
+| tree     | tree of files                             |
+| ..       | cd ../                                    |
+| ..2      | cd ../../                                 |
+| ..3      | cd ../../                                 |
+| ..4      | cd ../../../../                           |
+
 ## Customization
 
-You can customize this `.bashrc` configuration to suit your needs. Feel free to modify the aliases, functions, and environment variables to match your preferences. You can also add your own aliases and functions to extend the configuration further.
+You can customize this `.zshrc` configuration to suit your needs. Feel free to modify the aliases, functions, and environment variables to match your preferences. You can also add your own aliases and functions to extend the configuration further.
 
 ## Contributing
 
@@ -57,4 +71,11 @@ Contributions to this open-source project are welcome! If you find any bugs, hav
 3. Commit your changes with clear and concise messages.
 4. Push your changes to your forked repository.
 5. Submit a pull request, explaining the changes you made and why they should be merged.
+
+
+## TODO
+- Separate Aliases and functions files
+- Add Zsh plugins and theme(config)
+- Config  Zsh-autosuggestions plugin
+- add pnpm checking
 
