@@ -16,21 +16,35 @@ yarn() {
   fi
 }
 
+nr() {
+  npm run "$@"
+}
+
 # alias
 alias ..='cd ../'
 alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
-alias ls='exa -hrFa --long'
+
+# exa aliases
+alias l='exa'                                                          # ls
+alias ll='exa -lbF --git'                                                # list, size, type, git
+alias lf='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias tree='exa --tree --level=2'                                         # tree
 alias os_updater='sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo apt -y dist-upgrade --auto-remove'
 alias ram_optimizer='sudo sync && sudo sysctl -w vm.drop_caches=3'
 alias swap_optimizer='sudo sync && sudo swapoff -a && sudo swapon -a'
 
+# install prerequisites tools and libs
+install-prerequisites() {
+  sudo apt update
 
+  echo "Installing ZSH"
+  sudo apt install -y zsh
 
-# Function to install web development prerequisites
-install-webdev-prerequisites() {
-  sudo apt update && sudo apt -y upgrade
+  echo "Installing oh my zsh"
+  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
 
   echo "Installing git"
   sudo apt install -y git
@@ -41,17 +55,26 @@ install-webdev-prerequisites() {
   echo "Installing wget"
   sudo apt install -y wget
 
-  echo "Installing exa"
-  sudo apt install -y exa
-
   echo "Installing htop"
   sudo apt install -y htop
-  
+
+  echo "Installing Rust"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  source $HOME/.cargo/env
+
+
+  source ~/.zshrc
+}
+
+# Function to install web development
+install-webdev() {
+  sudo apt update
+
   # Install Node Version Manager (NVM)
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
   # Load NVM
-  source ~/.bashrc
+  source ~/.zshrc
 
   # Install the latest LTS version of Node.js
   nvm install --lts
@@ -81,20 +104,7 @@ install-webdev-prerequisites() {
   echo "Installing VLC"
   sudo apt install -y vlc
 
-  echo "Installing ZSH"
-  sudo apt install -y zsh
-
-  echo "Installing Oh-my-zsh"
-  sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-
-
-
   # Load all changes
   source ~/.zshrc
 
-}
-
-
-nr() {
-  npm run "$@"
 }
