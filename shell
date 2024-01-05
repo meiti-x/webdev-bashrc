@@ -37,6 +37,9 @@ alias os_updater='sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upg
 alias ram_optimizer='sudo sync && sudo sysctl -w vm.drop_caches=3'
 alias swap_optimizer='sudo sync && sudo swapoff -a && sudo swapon -a'
 
+# install prerequisites tools and libs
+install-prerequisites() {
+  sudo apt update
 
 # install prerequisites tools and libs
 install-prerequisites() {
