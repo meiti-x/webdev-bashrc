@@ -16,16 +16,33 @@ yarn() {
   fi
 }
 
+nr() {
+  npm run "$@"
+}
+
 # alias
 alias ..='cd ../'
 alias ..2='cd ../../'
 alias ..3='cd ../../../'
 alias ..4='cd ../../../../'
-alias ls='exa -hrFa --long'
 
-# Function to install web development prerequisites
-install-webdev-prerequisites() {
+# exa aliases
+alias l='exa'                                                          # ls
+alias ll='exa -lbF --git'                                                # list, size, type, git
+alias lf='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias tree='exa --tree --level=2'                                         # tree
+
+
+# install prerequisites tools and libs
+install-prerequisites() {
   sudo apt update
+
+  echo "Installing ZSH"
+  sudo apt install -y zsh
+  
+  echo "Installing oh my zsh"
+  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
 
   echo "Installing git"
   sudo apt install -y git
@@ -36,12 +53,21 @@ install-webdev-prerequisites() {
   echo "Installing wget"
   sudo apt install -y wget
 
-  echo "Installing exa"
-  sudo apt install -y exa
-
   echo "Installing htop"
   sudo apt install -y htop
-  
+
+  echo "Installing Rust"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  source $HOME/.cargo/env
+
+
+  source ~/.zshrc
+}
+
+# Function to install web development 
+install-webdev() {
+  sudo apt update
+
   # Install Node Version Manager (NVM)
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
@@ -70,13 +96,7 @@ install-webdev-prerequisites() {
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-
   # Load all changes
   source ~/.zshrc
 
-}
-
-
-nr() {
-  npm run "$@"
 }
