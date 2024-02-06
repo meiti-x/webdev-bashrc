@@ -1,102 +1,45 @@
+#!/bin/bash
 
-# block npm in yarn projects and vice versa
-npm() {
-  if [ -f yarn.lock ]; then
-    echo 'use yarn';
-  else
-    command npm $*;
-  fi
-}
+# # block npm in yarn projects and vice versa
+# npm() {
+#   if [ -f yarn.lock ]; then
+#     echo 'use yarn';
+#   else
+#     command npm $*;
+#   fi
+# }
 
-yarn() {
-  if [ -f package-lock.json ]; then
-    echo 'use npm';
-  else
-    command yarn $*;
-  fi
-}
+# yarn() {
+#   if [ -f package-lock.json ]; then
+#     echo 'use npm';
+#   else
+#     command yarn $*;
+#   fi
+# }
 
-nr() {
-  npm run "$@"
-}
-
-# alias
-alias ..='cd ../'
-alias ..2='cd ../../'
-alias ..3='cd ../../../'
-alias ..4='cd ../../../../'
+# nr() {
+#   npm run "$@"
+# }
 
 # exa aliases
-alias l='exa'                                                          # ls
-alias ll='exa -lbF --git'                                                # list, size, type, git
-alias lf='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-alias tree='exa --tree --level=2'                                         # tree
+# alias l='exa'                                                          # ls
+# alias ll='exa -lbF --git'                                                # list, size, type, git
+# alias lf='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+# alias tree='exa --tree --level=2'                                         # tree
+
+# install tools
+source tools/brew.sh
+source tools/zsh.sh
+source tools/utils.sh
+
+# source ./tools/zsh.sh
+
+# install-prerequisites() {
+
+#   echo "Installing Rust"
+#   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#   source $HOME/.cargo/env
 
 
-# install prerequisites tools and libs
-install-prerequisites() {
-  sudo apt update
-
-  echo "Installing ZSH"
-  sudo apt install -y zsh
-  
-  echo "Installing oh my zsh"
-  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-  sh install.sh
-
-  echo "Installing git"
-  sudo apt install -y git
-
-  echo "Installing curl"
-  sudo apt install -y curl
-
-  echo "Installing wget"
-  sudo apt install -y wget
-
-  echo "Installing htop"
-  sudo apt install -y htop
-
-  echo "Installing Rust"
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  source $HOME/.cargo/env
-
-
-  source ~/.zshrc
-}
-
-# Function to install web development 
-install-webdev() {
-  sudo apt update
-
-  # Install Node Version Manager (NVM)
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
-  # Load NVM
-  source ~/.zshrc
-
-  # Install the latest LTS version of Node.js
-  nvm install --lts
-
-  echo "Installing vscode"
-  sudo snap install code --classic
-
-  echo "Installing postman"
-  sudo snap install postman
-
-  echo "Installing yakuake"
-  sudo apt install -y yakuake
-
-  echo "Installing Typora"
-  sudo snap install typora
-
-  echo "Installing safe eyes..."
-  sudo apt-get install safeeyes
-
-  echo "Installing google-chrome"
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-  # Load all changes
-  source ~/.zshrc
-
-}
+#   source ~/.zshrc
+# }
