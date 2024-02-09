@@ -1,3 +1,4 @@
+#!/bin/zsh
 
 if [ ! -d "$HOME/.oh-my-zsh"]; then 
     echo "you need to install oh my zsh first, then make sure set your current shell to zsh."
@@ -33,11 +34,11 @@ fi
 line="source $FOLDER_PATH/shell.sh"
 
 # Check if the line exists in .zshrc
-if ! grep -qxF "$line" $HOME/.zshrc; then
-    echo "$line" >> $HOME/.zshrc
+if ! grep -qxF "$line" ~/.zshrc; then
+    echo "$line" >> ~/.zshrc
 fi
 
-source $HOME/.zshrc
+source ~/.zshrc
 
 
 
