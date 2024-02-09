@@ -26,11 +26,7 @@ This bashrc config tested for ubuntu 22.04.10
 ## Installation
 
 ```
-wget -qO- https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/.bashrc > webdev-bashrc.txt
-cat webdev-bashrc.txt >> ~/.zshrc
-source ~/.zshrc
-
-install-webdev-prerequisites
+ sh -c "$(curl -fsSL https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/prepare.sh)"
 ```
 ## Usage
 
