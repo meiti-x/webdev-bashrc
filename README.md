@@ -27,6 +27,8 @@ This bashrc config tested for ubuntu 22.04.10
 
 ```
  sh -c "$(curl -fsSL https://raw.githubusercontent.com/meiti-x/webdev-bashrc/main/prepare.sh)"
+
+ source $HOME/.zshrc
 ```
 ## Usage
 

@@ -39,9 +39,5 @@ if ! grep -qxF "$line" ~/.zshrc; then
 fi
 
 
-source $HOME/.zshrc
-
-
-
 
 
