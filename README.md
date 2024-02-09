@@ -16,12 +16,10 @@ Before using my Zsh configurations, ensure that you have Zsh installed on your s
 This script will symlink the necessary configuration files and directories to your home directory ($HOME) and set up any additional packages or dependencies specified.
 
 ## Contents
-.zshrc: My main Zsh configuration file, containing various settings, aliases, and custom functions.
-aliases/: Directory containing additional alias files organized by category for easy management.
-plugins/: Directory containing additional Zsh plugins that I use.
-themes/: Directory containing custom Zsh themes that I have created or customized.
-install.sh: Installation script to symlink configuration files and set up packages.
-Customization
+- aliases/: Directory containing additional alias files organized by category for easy management.
+- tools/: Directory containing installing tools that I use.
+- functions/: Directory containing custom bash function that I have created or customized.
+
 Feel free to customize any part of my Zsh configurations to suit your preferences. You can add or modify aliases, functions, or settings in the .zshrc file and organize them as you see fit.
 
 ## Contributing
