@@ -38,9 +38,6 @@ if ! grep -qxF "$line" ~/.zshrc; then
     echo "$line" >> ~/.zshrc
 fi
 
-source ~/.zshrc
-
-
 
 
 

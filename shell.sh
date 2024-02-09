@@ -2,7 +2,6 @@
                   
 # install tools
 source tools/brew.sh
-source tools/zsh.sh
 source tools/utils.sh
 
 # load aliases
