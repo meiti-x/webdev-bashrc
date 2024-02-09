@@ -1,8 +1,4 @@
 
-
-# FOLDER_NAME="~/webdev"
-
-
 if [ ! -d "$HOME/.oh-my-zsh"]; then 
     echo "you need to install oh my zsh first, then make sure set your current shell to zsh."
     exit 1
