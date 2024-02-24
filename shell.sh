@@ -1,5 +1,3 @@
-#!/bin/zsh
-                  
 # install tools
 source ./tools/brew.sh
 source ./tools/utils.sh
