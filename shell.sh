@@ -1,11 +1,11 @@
 #!/bin/zsh
                   
 # install tools
-source tools/brew.sh
-source tools/utils.sh
+source ./tools/brew.sh
+source ./tools/utils.sh
 
 # load aliases
-source alias/os.sh
+source ./alias/os.sh
 
 # load functions
-source functions/node.sh
+source ./functions/node.sh
