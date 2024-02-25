@@ -1,9 +1,13 @@
 # install tools
-source ./tools/brew.sh
-source ./tools/utils.sh
+
+FOLDER_NAME="webdev"
+FOLDER_PATH="$HOME/$FOLDER_NAME"
+
+source $FOLDER_PATH/tools/brew.sh
+source $FOLDER_PATH/tools/utils.sh
 
 # load aliases
-source ./alias/os.sh
+source $FOLDER_PATH/alias/os.sh
 
 # load functions
-source ./functions/node.sh
+source $FOLDER_PATH/functions/node.sh
