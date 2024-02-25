@@ -39,6 +39,14 @@ __utils() {
         echo "exa is already installed."
     fi
 
+    # Install bat
+    if ! command -v bat &> /dev/null; then
+        echo "Installing bat..."
+        brew install bat
+    else
+        echo "bat is already installed."
+    fi
+
     # Install VLC
     if ! command -v vlc &> /dev/null; then
         echo "Installing vlc..."
