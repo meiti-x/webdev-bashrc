@@ -31,19 +31,7 @@ __utils() {
         echo "Htop is already installed."
     fi
 
-    # Check if exa is already installed
-    if ! command -v exa &> /dev/null; then
-        # Check the operating system
-        if [[ "$(uname)" == "Linux" ]]; then
-            echo "Installing exa for Linux..."
-            sudo apt update
-            sudo apt install exa
-        else
-            echo "You should install exa on your own. Visit https://the.exa.website/ for instructions."
-        fi
-    else
-        echo "exa is already installed."
-    fi
+
 
     # Install bat
     if ! command -v bat &> /dev/null; then
