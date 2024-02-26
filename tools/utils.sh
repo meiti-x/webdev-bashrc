@@ -52,12 +52,4 @@ __utils() {
     else
         echo "bat is already installed."
     fi
-
-    # Install VLC
-    if ! command -v vlc &> /dev/null; then
-        echo "Installing vlc..."
-        brew install --cask vlc
-    else
-        echo "vlc is already installed."
-    fi
 }
