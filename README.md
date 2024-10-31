@@ -43,5 +43,7 @@ Feel free to customize and expand upon this template to include any additional i
 
 Did you know that despite the repository name being `webdev-bashrc`, it's actually focused on Zsh configurations? The name originates from my initial intention to write a `.bashrc` function for my web development projects. However, over time, I transitioned to using Zsh as my **primary** shell. While the name remains the same, the repository now houses my customized **Zsh** configurations, aliases, and packages.
 
-
+## Project todos
+- change folder structure
+- remove brew support and move to pacman as main package manger
 
